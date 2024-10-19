@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+      <div class="search-container">
+        <input type="text" id="barraBusqueda" placeholder="Buscar productos...">
+        <button id="botonBuscar">Buscar</button>
+      </div>
+      <div>
+        <button id="abrirFormulario" class="registro-boton">Registrar Producto</button>
+      </div>
+    </header>
+    
+    <div id="menu-categorias">
+        <h2>Categorías</h2>
+        <ul>
+            <li><a href="#" onclick="filtrarProductos('todos')">Todos</a></li>
+            <li><a href="#" onclick="filtrarProductos('papas')">Papas</a></li>
+            <li><a href="#" onclick="filtrarProductos('hamburguesas')">Hamburguesas</a></li>
+            <li><a href="#" onclick="filtrarProductos('combos')">Combos</a></li>
+            <li><a href="#" onclick="filtrarProductos('postres')">Postres</a></li>
+            <li><a href="#" onclick="filtrarProductos('entradas')">Entradas</a></li>
+        </ul>
+    </div>
+    
+    <div id="formularioPopUp" class="popup">
+        <div class="popup-contenido">
+            <span class="cerrar" id="cerrarFormulario">&times;</span>
+            <h1>Formulario de Registro de Productos</h1>
+            <form id="registro-productos">
+                <label for="nombre">Nombre del Producto:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="imagen">URL de la Imagen:</label>
+                <input type="url" id="imagen" name="imagen" required>
+                
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" name="precio" step="0.01" required>
+                
+                <label for="categoria">Categoría:</label>
+                <select id="categoria" name="categoria" required>
+                    <option value="" disabled selected>Selecciona una categoría</option>
+                    <option value="papas">Papas</option>
+                    <option value="hamburguesas">Hamburguesas</option>
+                    <option value="combos">Combos</option>
+                    <option value="postres">Postres</option>
+                    <option value="entradas">Entradas</option>
+                </select>
+                
+                <button type="submit">Registrar Producto</button>
+            </form>
+        </div>
+    </div>
+    
+    <div id="productosRegistrados">
+        <h2>Menú de productos</h2>
+        <ul id="listaProductos"></ul>
+        <p id="totalPrecio">Total: $0.00</p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
