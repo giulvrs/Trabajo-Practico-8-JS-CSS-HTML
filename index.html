@@ -7,16 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Encabezado con barra de búsqueda y botón para registrar productos -->
     <header>
-      <div class="search-container">
-        <input type="text" id="barraBusqueda" placeholder="Buscar productos...">
-        <button id="botonBuscar">Buscar</button>
-      </div>
-      <div>
-        <button id="abrirFormulario" class="registro-boton">Registrar Producto</button>
-      </div>
+        <div class="search-container">
+            <input type="text" id="barraBusqueda" placeholder="Buscar productos...">
+            <button id="botonBuscar">Buscar</button>
+        </div>
+        <div>
+            <button id="abrirFormulario" class="registro-boton">Registrar Producto</button>
+        </div>
     </header>
     
+    <!-- Menú de categorías -->
     <div id="menu-categorias">
         <h2>Categorías</h2>
         <ul>
@@ -29,9 +31,10 @@
         </ul>
     </div>
     
+    <!-- Formulario de registro de productos en un popup -->
     <div id="formularioPopUp" class="popup">
         <div class="popup-contenido">
-            <span class="cerrar" id="cerrarFormulario">&times;</span>
+            <span class="cerrar" id="cerrarFormulario">×</span>
             <h1>Formulario de Registro de Productos</h1>
             <form id="registro-productos">
                 <label for="nombre">Nombre del Producto:</label>
@@ -58,12 +61,14 @@
         </div>
     </div>
     
+    <!-- Sección para mostrar los productos registrados -->
     <div id="productosRegistrados">
         <h2>Menú de productos</h2>
         <ul id="listaProductos"></ul>
         <p id="totalPrecio">Total: $0.00</p>
     </div>
 
+    <!-- Enlace al archivo JavaScript -->
     <script src="main.js"></script>
 </body>
 </html>
